@@ -30,12 +30,11 @@ You may also find the code in the demos folder of the sources.
 
 ### pushing notifications
 
-https://github.com/MPI-IS/ntfy_lite/blob/079f110601e46261e81d7006cf8def0322fd0fb1/demos/ntfy_push.py#L1-L71
-
+https://github.com/MPI-IS/ntfy_lite/blob/87eab776278686e5f58857c8caa76ac1d66813c9/demos/ntfy_push.py#L1-L71
 
 ### logging handler
 
-https://github.com/MPI-IS/ntfy_lite/blob/079f110601e46261e81d7006cf8def0322fd0fb1/demos/ntfy_logging.py#L1-L146
+https://github.com/MPI-IS/ntfy_lite/blob/87eab776278686e5f58857c8caa76ac1d66813c9/demos/ntfy_logging.py#L1-L146
 
 ## Limitation
 
