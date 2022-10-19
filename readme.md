@@ -1,4 +1,5 @@
 ![unit tests](https://github.com/MPI-IS/ntfy_lite/actions/workflows/tests.yaml/badge.svg)
+![mypy](https://github.com/MPI-IS/ntfy_lite/actions/workflows/python_mypy.yml/badge.svg)
 
 # NTFY LITE
 
