@@ -10,7 +10,7 @@ from pathlib import Path
 logger = logging.getLogger("ntfy_lite")
 
 topic = "ntfy_lite_demo"  # or something else
-email = "vberenz@tue.mpg.de"  # write your email here if you wish
+email = None  # write your email here if you wish
 
 
 def _error_callback(e: Exception):
