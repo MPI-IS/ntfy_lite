@@ -109,7 +109,7 @@ def run(logfile=Path) -> None:
     """
 
     logger = logging.getLogger("run function")
-    logger.info(f"running for 10 seconds, visit: https://ntfy.sh/{topic}")
+    logger.info(f"running for 20 seconds, visit: https://ntfy.sh/{topic}")
 
     # running for 10 seconds
     iteration = 1
