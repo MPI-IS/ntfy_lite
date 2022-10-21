@@ -34,7 +34,7 @@ https://github.com/MPI-IS/ntfy_lite/blob/87eab776278686e5f58857c8caa76ac1d66813c
 
 ### logging handler
 
-https://github.com/MPI-IS/ntfy_lite/blob/87eab776278686e5f58857c8caa76ac1d66813c9/demos/ntfy_logging.py#L1-L146
+https://github.com/MPI-IS/ntfy_lite/blob/52fc7f008fdac3f735d39dd01064a0aa5b751e00/demos/ntfy_logging.py#L1-L146
 
 ## Limitation
 
