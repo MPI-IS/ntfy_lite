@@ -27,7 +27,7 @@ def _configure_log(logfile: Path) -> None:
     printed to logfile, and sent as ntfy notification.
     """
 
-    ## configuration for the ntfy handler ##
+    # configuration for the ntfy handler #
 
     # tags associated to the logging level
     level2tags = {
@@ -68,7 +68,7 @@ def _configure_log(logfile: Path) -> None:
         level2email=level2email,
     )
 
-    ## other handlers ##
+    # other handlers #
 
     # printing to terminal
     stream_handler = logging.StreamHandler()
@@ -76,7 +76,7 @@ def _configure_log(logfile: Path) -> None:
     # printing to file
     file_handler = logging.FileHandler(logfile)
 
-    ## setting up logs ##
+    # setting up logs #
 
     handlers: typing.Optional[typing.Iterable[logging.Handler]]
     handlers = [stream_handler, file_handler, ntfy_handler]

@@ -14,9 +14,11 @@ def run():
     #       as the icon example from the ntfy documentation also do not work
 
     # basic usage, most arguments are optional
+    # priority possibles values: MAX, HIGH, DEFAULT, LOW, MIN
     ntfy.push(
         topic,
         "ntfy_lite demo 1 - basic usage",
+        priority=ntfy.Priority.DEFAULT,
         message="this is a demo from ntfy_lite",
         tags=["butterfly", "cat"],
         icon="https://styles.redditmedia.com/t5_32uhe/styles/communityIcon_xnt6chtnr2j21.png",
