@@ -29,8 +29,7 @@ The two following examples cover the full API.
 You may also find the code in the demos folder of the sources.
 
 ### pushing notifications
-
-https://github.com/MPI-IS/ntfy_lite/blob/87eab776278686e5f58857c8caa76ac1d66813c9/demos/ntfy_push.py#L1-L71
+https://github.com/MPI-IS/ntfy_lite/blob/da5750eed1ed58eacf4ff1bb1498586b41242f70/demos/ntfy_push.py#L1-L73
 
 ### logging handler
 
