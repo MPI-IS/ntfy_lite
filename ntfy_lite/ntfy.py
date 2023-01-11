@@ -49,7 +49,8 @@ class _DataManager:
         if filepath is not None:
             self._data = open(filepath, "rb")
         elif message is not None:
-            self._data = message.format("UTF-8")
+            self._data = message.encode(encoding="UTF-8", errors="replace").decode()
+            self._data = message.encode(encoding="latin-1", errors="replace").decode()
 
     def __enter__(self) -> typing.Union[typing.IO, str]:
         return self._data
