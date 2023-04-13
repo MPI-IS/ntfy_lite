@@ -102,7 +102,7 @@ def _do(error: bool, iteration: int) -> None:
         logger.error(f"failed to do iteration {iteration}")
 
 
-def run(logfile=Path) -> None:
+def _run(logfile=Path) -> None:
     """
     Calls the dummy function '_do' every 2 seconds for 20 seconds,
     setting errors to be logged every 4 seconds
@@ -130,8 +130,10 @@ def run(logfile=Path) -> None:
     logger.info("exit")
 
 
-if __name__ == "__main__":
+def run()->None:
 
+    print(f"logging to htts://ntfy.sh/{topic}")
+    
     with tempfile.TemporaryDirectory() as tmp:
 
         logfile = Path(tmp) / "ntfy_lite_demo_handler.txt"
@@ -141,6 +143,6 @@ if __name__ == "__main__":
 
         # running for 20 seconds
         try:
-            run(logfile)
+            _run(logfile)
         except Exception as e:
             print(f"failed with error: {e}")

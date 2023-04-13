@@ -1,3 +1,6 @@
+"""
+Module defining the function 'validate_url'.
+"""
 import typing
 import validators
 
@@ -9,7 +12,7 @@ def validate_url(attribute: str, value: typing.Optional[str]) -> None:
 
     Args:
       attribute: an arbitrary string, used in the message of the
-      raised ValueError
+        raised ValueError
       value: the string to check
     """
     if value is None:

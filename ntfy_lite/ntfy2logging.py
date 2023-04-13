@@ -1,3 +1,11 @@
+"""
+Module defining:
+
+- LoggingLevel: typing union of all logging levels
+- Priority: enumeration over ntfy priority levels
+- level2priority: default mapping between logging levels and ntfy priority levels
+"""
+
 from enum import Enum
 import typing
 import logging
@@ -12,7 +20,7 @@ LoggingLevel = typing.Literal[  # type: ignore
 ]
 """
 Union of all logging levels (DEBUG, INFO, NOTSET,
-WARNING, ERROR and CRITICLA)
+WARNING, ERROR and CRITICAL)
 """
 
 
@@ -22,10 +30,20 @@ class Priority(Enum):
     """
 
     MAX = "5"
+    """MAX"""
+    
     HIGH = "4"
+    """HIGH"""
+    
     DEFAULT = "3"
+    """DEFAULT"""
+    
     LOW = "2"
+    """LOW"""
+    
     MIN = "1"
+    """MIN"""
+    
 
 
 level2priority: typing.Dict[LoggingLevel, Priority] = {

@@ -1,3 +1,28 @@
+"""
+Module defining the NtfyHandler class.
+
+The NtfyHandler is a logging handler, i.e. an handler suitable for the 
+[python logging package](https://docs.python.org/3/library/logging.html)
+
+``` python
+# Basic usage
+
+import logging
+import ntfy_lite as ntfy
+
+ntfy_handler = ntfy.NtfyHandler("my_topic")
+
+logging.basicConfig(
+        level=logging.INFO,
+        format="[%(levelname)s] %(asctime)s | %(name)s |  %(message)s",
+        datefmt="%d-%b-%y %H:%M:%S",
+        handlers=(ntfy_handler,),
+)
+```
+
+
+"""
+
 import logging
 import typing
 from pathlib import Path
@@ -7,7 +32,8 @@ from .ntfy import DryRun, push
 
 
 class NtfyHandler(logging.Handler):
-    """Logging Handler that push ntfy notifications.
+    """Subclass of [logging.Handler](https://docs.python.org/3/library/logging.html#handler-objects) 
+    that pushes ntfy notifications.
 
     The notification title will be the record name, and the
     notification message will be either the record message or a
@@ -79,6 +105,9 @@ class NtfyHandler(logging.Handler):
         return True
 
     def emit(self, record: logging.LogRecord) -> None:
+        """
+        Push the record as an ntfy message.
+        """
         if self._last_messages and not self._is_new_record(record):
             return
         try:

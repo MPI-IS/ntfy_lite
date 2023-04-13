@@ -1,3 +1,9 @@
+""" Module defining the Action class as well as it subclasses: 
+
+- ViewAction
+- HttpAction
+"""
+
 import typing
 from enum import Enum, auto
 from .utils import validate_url
@@ -6,7 +12,8 @@ from .utils import validate_url
 class Action:
     """
     Superclass for action buttons.
-    See: https://ntfy.sh/docs/publish/#action-buttons
+
+    See: [ntfy button action documentation](https://ntfy.sh/docs/publish/#action-buttons)
 
     Args:
       action: name of the action (e.g. 'view', 'http')
@@ -38,8 +45,8 @@ class Action:
 class ViewAction(Action):
     """
     Class encapsulating the information of a view action.
-    See: https://ntfy.sh/docs/publish/#open-websiteapp
-    For arguments: see documentation of the Action superclass
+    See: [ntfy view action](https://ntfy.sh/docs/publish/#open-websiteapp)
+    For arguments: see documentation of the [ntfy_lite.actions.Action][] superclass
     """
 
     def __init__(self, label: str, url: str, clear: bool = False) -> None:
@@ -57,14 +64,28 @@ class HttpMethod(Enum):
     """
 
     GET = auto()
+    """ GET http method """
+
     POST = auto()
+    """ POST http method """
+    
     PUT = auto()
-
-
+    """ PUT http method """
+    
+    
 class HttpAction(Action):
     """
     Class encapsulating the information of a view action.
-    See: https://ntfy.sh/docs/publish/#send-http-request
+    See: [ntfy http action](https://ntfy.sh/docs/publish/#send-http-request)
+
+    Args:
+      label: arbitrary string
+      url: url to which the request should be sent
+      clear: if the ntfy notification should be cleared after the request succeeds
+      method: GET, POST or PUT
+      headers: HTTP headers to be passed in the request
+      body: HTTP body
+
     """
 
     def __init__(

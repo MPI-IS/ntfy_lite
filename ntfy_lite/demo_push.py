@@ -9,12 +9,12 @@ email = None  # write your email here if you wish
 
 
 def run():
-
     # note: icon does not seem to work, but that does not seem to be an issue with ntfy_lite
     #       as the icon example from the ntfy documentation also do not work
 
     # basic usage, most arguments are optional
     # priority possibles values: MAX, HIGH, DEFAULT, LOW, MIN
+    print(f"pushing a message to https://ntfy.sh/{topic}")
     ntfy.push(
         topic,
         "ntfy_lite demo 1 - basic usage",
@@ -36,6 +36,7 @@ def run():
     )
 
     # sending an attachment instead of a message
+    print(f"pushing the content of a file to https://ntfy.sh/{topic}")
     with tempfile.TemporaryDirectory() as tmp:
 
         filepath = Path(tmp) / "ntfy_lite_demo.txt"
@@ -53,6 +54,7 @@ def run():
         )
 
     # delayed notificiation / scheduled delivery
+    print(f"pushing a delayed message to https://ntfy.sh/{topic} (one minute delay)")
     ntfy.push(
         topic,
         "ntfy_lite demo 2 - delayed notification",
@@ -63,11 +65,3 @@ def run():
     )
 
 
-if __name__ == "__main__":
-
-    try:
-        run()
-    except Exception as e:
-        print(f"failed to send the notification: {e}")
-    else:
-        print(f"notifications sent, visit https://ntfy.sh/{topic}")

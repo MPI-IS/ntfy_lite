@@ -1,27 +1,11 @@
 [tool.poetry]
-name = "ntfy_lite"
+name = "ntfy-lite"
 version = "1.0.1"
 description = "minimalistic python API for sending ntfy notifications"
-authors = [
-	"Vincent Berenz <vberenz@tuebingen.mpg.de>",
-]
-maintainers = [
-	"Vincent Berenz <vberenz@tuebingen.mpg.de>",
-]
-packages = [
-	 { include = "ntfy_lite" },
-] 
+authors = ["Vincent Berenz <vberenz@tuebingen.mpg.de>"]
 license = "BSD-3-Clause"
-readme = "readme.md"
-homepage = "https://github.com/MPI-IS/ntfy_lite"
-repository = "https://github.com/MPI-IS/ntfy_lite"
-
-[tool.poetry.dependencies]
-python = ">=3.7,<4"
-requests = "^2.28.1"
-pytest = "^7.1.3"
-validators = "^0.20.0"
-types-requests = "^2.28.11.2"
+readme = "README.md"
+packages = [{include = "ntfy_lite"}]
 
 [[tool.poetry.source]]
 name = "github"
@@ -29,6 +13,26 @@ url = "https://github.com/MPI-IS/ntfy_lite"
 default = false
 secondary = false
 
+[tool.poetry.scripts]
+ntfy_lite_push_demo = 'ntfy_lite.demo_push:run'
+ntfy_lite_logging_demo = 'ntfy_lite.demo_logging:run'
+
+[tool.poetry.dependencies]
+python = ">3.8.1,<4"
+requests = "^2.28.2"
+validators = "^0.20.0"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.2.0"
+flake8 = "^6.0.0"
+pytest = "^7.3.0"
+types-requests = "^2.28.11.17"
+ipython = "^8.12.0"
+mkdocs = "^1.4.2"
+mkdocstrings = {extras = ["python"], version = "^0.21.2"}
+mkdocs-material = "^9.1.6"
+
+
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
