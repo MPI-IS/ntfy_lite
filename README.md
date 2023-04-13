@@ -1,5 +1,5 @@
 ![unit tests](https://github.com/MPI-IS/ntfy_lite/actions/workflows/tests.yaml/badge.svg)
-![mypy](https://github.com/MPI-IS/ntfy_lite/actions/workflows/python_mypy.yml/badge.svg
+![mypy](https://github.com/MPI-IS/ntfy_lite/actions/workflows/python_mypy.yml/badge.svg)
 [![documentation](https://github.com/MPI-IS/ntfy_lite/actions/workflows/mkdocs.yaml/badge.svg)](https://mpi-is.github.io/ntfy_lite/)
 
 
