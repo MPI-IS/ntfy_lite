@@ -19,7 +19,7 @@ jobs:
       uses: actions/cache@v2
       with:
         path: ~/.local
-        key: poetry-1.2.0-0
+        key: poetry-1.4.2-0
     - uses: snok/install-poetry@v1
       with:
         version: 1.2.0
