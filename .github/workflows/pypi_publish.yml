@@ -1,5 +1,5 @@
 ---
-name: mkdocs
+name: pypi_publish
 on:
   push:
     branches:
