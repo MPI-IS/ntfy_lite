@@ -1,4 +1,4 @@
-""" Module defining the Action class as well as it subclasses: 
+""" Module defining the Action class as well as it subclasses:
 
 - ViewAction
 - HttpAction
@@ -23,7 +23,6 @@ class Action:
     """
 
     def __init__(self, action: str, label: str, url: str, clear: bool = False):
-
         validate_url("Action.url", url)
 
         self.action = action
@@ -68,11 +67,11 @@ class HttpMethod(Enum):
 
     POST = auto()
     """ POST http method """
-    
+
     PUT = auto()
     """ PUT http method """
-    
-    
+
+
 class HttpAction(Action):
     """
     Class encapsulating the information of a view action.

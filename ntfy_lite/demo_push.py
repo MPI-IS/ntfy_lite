@@ -38,7 +38,6 @@ def run():
     # sending an attachment instead of a message
     print(f"pushing the content of a file to https://ntfy.sh/{topic}")
     with tempfile.TemporaryDirectory() as tmp:
-
         filepath = Path(tmp) / "ntfy_lite_demo.txt"
         with open(filepath, "w") as f:
             f.write("content of ntfy_lite_demo.txt")
@@ -63,5 +62,3 @@ def run():
         tags="hourglass",
         email=email,
     )
-
-

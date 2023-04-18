@@ -7,7 +7,6 @@ from pathlib import Path
 
 
 def test_minimal_message_push():
-
     topic = "ntfy_lite_test"
     title = "ntfy lite test mimimal push"
     message = "ntfy lite test mimimal push: message"
@@ -15,7 +14,6 @@ def test_minimal_message_push():
 
 
 def test_minimal_filepath_push():
-
     topic = "ntfy_lite_test"
     title = "ntfy lite test mimimal push"
 
@@ -28,7 +26,6 @@ def test_minimal_filepath_push():
 
 
 def test_tags_push():
-
     topic = "ntfy_lite_test"
     title = "ntfy lite test mimimal push"
     message = "ntfy lite test mimimal push: message"
@@ -37,7 +34,6 @@ def test_tags_push():
 
 
 def test_click_push():
-
     topic = "ntfy_lite_test"
     title = "ntfy lite test mimimal push"
     message = "ntfy lite test mimimal push: message"
@@ -55,7 +51,6 @@ def test_click_no_url_push():
 
 
 def test_email_push():
-
     topic = "ntfy_lite_test"
     title = "ntfy lite test mimimal push"
     message = "ntfy lite test mimimal push: message"
@@ -64,7 +59,6 @@ def test_email_push():
 
 
 def test_icon_push():
-
     topic = "ntfy_lite_test"
     title = "ntfy lite test mimimal push"
     message = "ntfy lite test mimimal push: message"
@@ -75,7 +69,6 @@ def test_icon_push():
 
 
 def test_icon_not_url_push():
-
     topic = "ntfy_lite_test"
     title = "ntfy lite test mimimal push"
     message = "ntfy lite test mimimal push: message"
@@ -85,7 +78,6 @@ def test_icon_not_url_push():
 
 
 def test_attach_push():
-
     topic = "ntfy_lite_test"
     title = "ntfy lite test mimimal push"
     message = "ntfy lite test mimimal push: message"
@@ -94,7 +86,6 @@ def test_attach_push():
 
 
 def test_attach_not_an_url_push():
-
     topic = "ntfy_lite_test"
     title = "ntfy lite test mimimal push"
     message = "ntfy lite test mimimal push: message"
@@ -105,7 +96,6 @@ def test_attach_not_an_url_push():
 
 @pytest.mark.parametrize("clear", [True, False])
 def test_action_view_push(clear):
-
     topic = "ntfy_lite_test"
     title = "ntfy lite test mimimal push"
     message = "ntfy lite test mimimal push: message"
@@ -115,7 +105,6 @@ def test_action_view_push(clear):
 
 @pytest.mark.parametrize("clear", [True, False])
 def test_actions_view_push(clear):
-
     topic = "ntfy_lite_test"
     title = "ntfy lite test mimimal push"
     message = "ntfy lite test mimimal push: message"
@@ -132,7 +121,6 @@ def test_action_view_not_url(clear):
 
 @pytest.mark.parametrize("clear", [True, False])
 def test_action_http_push(clear):
-
     topic = "ntfy_lite_test"
     title = "ntfy lite test mimimal push"
     message = "ntfy lite test mimimal push: message"
@@ -149,7 +137,6 @@ def test_action_http_push(clear):
 
 @pytest.mark.parametrize("clear", [True, False])
 def test_actions_view_http_push(clear):
-
     topic = "ntfy_lite_test"
     title = "ntfy lite test mimimal push"
     message = "ntfy lite test mimimal push: message"
@@ -166,7 +153,6 @@ def test_actions_view_http_push(clear):
 
 
 def test_at_push():
-
     topic = "ntfy_lite_test"
     title = "ntfy lite test mimimal push"
     message = "ntfy lite test mimimal push: message"
@@ -188,7 +174,6 @@ def test_handler(
     use_callback: bool,
     dry_run: ntfy.DryRun,
 ):
-
     topic = "ntfy_lite handler test"
 
     record = logging.LogRecord(
@@ -210,7 +195,6 @@ def test_handler(
     logging.raiseExceptions = False
 
     with tempfile.TemporaryDirectory() as tmp:
-
         filepath = Path(tmp) / "test.txt"
         with open(filepath, "w") as f:
             f.write("test content")

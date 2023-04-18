@@ -130,12 +130,10 @@ def _run(logfile=Path) -> None:
     logger.info("exit")
 
 
-def run()->None:
-
+def run() -> None:
     print(f"logging to htts://ntfy.sh/{topic}")
-    
-    with tempfile.TemporaryDirectory() as tmp:
 
+    with tempfile.TemporaryDirectory() as tmp:
         logfile = Path(tmp) / "ntfy_lite_demo_handler.txt"
 
         # setting up the logs

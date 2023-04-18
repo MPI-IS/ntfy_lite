@@ -1,7 +1,7 @@
 """
 Module defining the NtfyHandler class.
 
-The NtfyHandler is a logging handler, i.e. an handler suitable for the 
+The NtfyHandler is a logging handler, i.e. an handler suitable for the
 [python logging package](https://docs.python.org/3/library/logging.html)
 
 ``` python
@@ -32,7 +32,7 @@ from .ntfy import DryRun, push
 
 
 class NtfyHandler(logging.Handler):
-    """Subclass of [logging.Handler](https://docs.python.org/3/library/logging.html#handler-objects) 
+    """Subclass of [logging.Handler](https://docs.python.org/3/library/logging.html#handler-objects)
     that pushes ntfy notifications.
 
     The notification title will be the record name, and the

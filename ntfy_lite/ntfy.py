@@ -25,7 +25,6 @@ class _DataManager:
     def __init__(
         self, message: typing.Optional[str], filepath: typing.Optional[Path]
     ) -> None:
-
         # checking the user is at least pushing a message
         # or a file attachment
         if not any((message, filepath)):
@@ -76,9 +75,11 @@ class DryRun(Enum):
 
     This is meant for testing.
     """
+
     on = auto()
     off = auto()
     error = auto()
+
 
 def push(
     topic: str,
@@ -119,12 +120,12 @@ def push(
       tags (i.e. emojis): either a string (a single tag) or a list of string (several tags). see [supported emojis](https://docs.ntfy.sh)
       click: URL link to be included in the notification
       email: address to which the notification should also be sent
-      filepath: path to the file to be sent as attachement. 
+      filepath: path to the file to be sent as attachement.
         It is optional and if None, then a message argument must be provided instead.
       icon: URL to an icon to include in the notification
       actions: An action is either a [ntfy_lite.actions.ViewAction][]
-        (i.e. a link to a website) or a [ntfy_lite.actions.HttpAction][] 
-        (i.e. sending of a HTTP GET, POST or PUT request to a website) 
+        (i.e. a link to a website) or a [ntfy_lite.actions.HttpAction][]
+        (i.e. sending of a HTTP GET, POST or PUT request to a website)
       at: to be used for delayed notification, see [scheduled delivery](https://ntfy.sh/docs/publish/#scheduled-delivery)
       url: ntfy server
       dry_run: for testing purposes, see [ntfy_lite.ntfy.DryRun][]
@@ -137,7 +138,6 @@ def push(
     # This context manager makes sure that data get closed
     # (if a file)
     with _DataManager(message, filepath) as data:
-
         # checking that arguments that are expected to be
         # urls are urls
         urls = {"click": click, "attach": attach, "icon": icon}

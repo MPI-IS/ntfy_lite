@@ -31,19 +31,18 @@ class Priority(Enum):
 
     MAX = "5"
     """MAX"""
-    
+
     HIGH = "4"
     """HIGH"""
-    
+
     DEFAULT = "3"
     """DEFAULT"""
-    
+
     LOW = "2"
     """LOW"""
-    
+
     MIN = "1"
     """MIN"""
-    
 
 
 level2priority: typing.Dict[LoggingLevel, Priority] = {
