@@ -5,3 +5,4 @@ from .defaults import level2tags
 from .handler import NtfyHandler
 from .actions import Action, HttpMethod, HttpAction, ViewAction
 from .ntfy import DryRun, push
+from .version import __version__
