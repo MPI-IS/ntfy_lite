@@ -1,9 +1,8 @@
 ---
 name: pypi_publish
 on:
-  push:
-    tags:
-      - '*'
+  tags:
+    - '*'
 jobs:
   build:
     runs-on: ubuntu-latest
