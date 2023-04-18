@@ -2,9 +2,8 @@
 name: pypi_publish
 on:
   push:
-    branches:
-      - master
-  workflow_dispatch:
+    tags:
+      - '*'
 jobs:
   build:
     runs-on: ubuntu-latest
