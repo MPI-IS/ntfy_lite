@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ntfy-lite"
-version = "1.0.14"
+version = "1.0.15"
 description = "minimalistic python API for sending ntfy notifications"
 authors = ["Vincent Berenz <vberenz@tuebingen.mpg.de>"]
 license = "BSD-3-Clause"
