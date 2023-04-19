@@ -1,0 +1,53 @@
+site_name: ntfy lite
+
+theme:
+  name: "material"
+  logo: assets/mpi-is.png
+  palette:
+    accent: indigo
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.footer
+  icon:
+    repo: fontawesome/brands/github
+
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+repo_url: https://github.com/MPI-IS/ntfy_lite
+repo_name: MPI-IS/ntfy_lite
+
+copyright: Copyright &copy; 2020 Max Planck Society
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/MPI-IS/ntfy_lite
+
+extra_css:
+ - stylesheets/extra.css
+
+
+plugins:
+  - search
+  - autorefs
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_submodules: true
+
+nav:
+ - welcome: index.md
+ - installation: installation.md
+ - usage: usage.md
+ - limitation: limitation.md
+ - API: references.md
