@@ -71,7 +71,7 @@ class DryRun(Enum):
 
     - If 'on' is passed, then the [ntfy_lite.ntfy.push][] function will *not* publish to ntfy.
 
-    - If 'error' is passed, then the [ntfy_lite.ntfy.push][] function will raise an [ntfy_lite.error.NtfyError].
+    - If 'error' is passed, then the [ntfy_lite.ntfy.push][] function will raise an [ntfy_lite.error.NtfyError][].
 
     This is meant for testing.
     """
