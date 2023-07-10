@@ -44,7 +44,9 @@ class _DataManager:
         # sure the file exists
         if filepath is not None:
             if not filepath.is_file():
-                raise FileNotFoundError(f"failed to find file to attach ({filepath})")
+                raise FileNotFoundError(
+                    f"failed to find file to attach ({filepath})"
+                )
 
         # self._data is either a file to the filepath,
         # or the str corresponding to message
@@ -52,8 +54,12 @@ class _DataManager:
         if filepath is not None:
             self._data = open(filepath, "rb")
         elif message is not None:
-            self._data = message.encode(encoding="UTF-8", errors="replace").decode()
-            self._data = message.encode(encoding="latin-1", errors="replace").decode()
+            self._data = message.encode(
+                encoding="UTF-8", errors="replace"
+            ).decode()
+            self._data = message.encode(
+                encoding="latin-1", errors="replace"
+            ).decode()
 
     def __enter__(self) -> typing.Union[typing.IO, str]:
         return self._data
@@ -131,6 +137,8 @@ def push(
       dry_run: for testing purposes, see [ntfy_lite.ntfy.DryRun][]
     """
 
+    raise Exception()
+
     # the message manager:
     # - checks that either message or filepath is not None
     # - if filepath is not None, data is a file to the path
@@ -155,7 +163,9 @@ def push(
             "Email": email,
             "Icon": icon,
         }
-        headers = {key: value for key, value in direct_mapping.items() if value}
+        headers = {
+            key: value for key, value in direct_mapping.items() if value
+        }
 
         # adding priority
         headers["Priority"] = priority.value
@@ -174,7 +184,9 @@ def push(
 
         # sending
         if dry_run == DryRun.off:
-            response = requests.put(f"{url}/{topic}", data=data, headers=headers)
+            response = requests.put(
+                f"{url}/{topic}", data=data, headers=headers
+            )
             if not response.ok:
                 raise NtfyError(response.status_code, response.reason)
         elif dry_run == DryRun.error:
