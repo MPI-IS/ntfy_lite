@@ -1,0 +1,6 @@
+:root {
+  --md-primary-fg-color:        #006C66;
+}
+.md-sidebar--secondary {
+  order: 0;
+}
