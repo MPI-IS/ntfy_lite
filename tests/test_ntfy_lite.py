@@ -135,6 +135,20 @@ def test_action_http_push(clear):
     ntfy.push(topic, title, message=message, actions=action, dry_run=True)
 
 
+def test_extended_ascii_push():
+    topic = "ntfy_lite_test"
+    title = "ntfy lite test extended ascii push"
+    message = "ntfy_extended_ascii_push message: (°_°)"
+    ntfy.push(topic, title, message=message, dry_run=True)
+
+
+def test_unicode_push():
+    topic = "ntfy_lite_test"
+    title = "ntfy lite test unicode push"
+    message = "ntfy unicode push message: 🐋💐🪂"
+    ntfy.push(topic, title, message=message, dry_run=True)
+
+
 @pytest.mark.parametrize("clear", [True, False])
 def test_actions_view_http_push(clear):
     topic = "ntfy_lite_test"
